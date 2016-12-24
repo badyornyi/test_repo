@@ -1,0 +1,22 @@
+Google Chrome
+
+1. Download last chromedriver archived - https://sites.google.com/a/chromium.org/chromedriver/downloads
+2. Extract chromedriver.exe to <Ruby_Installation_Path>/bin/ folder (since this catalog is added to PATH)
+
+
+Internet Explorer
+1. Download last IEDriverServer archived according to your OS version (32/64 bit) - https://selenium-release.storage.googleapis.com/index.html
+2. Extract IEDriverServer.exe to <Ruby_Installation_Path>/bin/ folder (since this catalog is added to PATH)
+
+
+SafariDriver (works only on OSX)
+1. Download last available SafariDriver.safariextz browser extension
+2. Add it to Selenium driver like this:
+  opts = Selenium::WebDriver::Safari::Options.new
+  opts.add_extension "/path/to/your.safariextz"
+  driver = Selenium::WebDriver.for :safari, :options => opts
+
+or this
+  driver = Selenium::WebDriver.for :safari, :extensions => ["/path/to/your.safariextz"]
+
+
